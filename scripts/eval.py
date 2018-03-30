@@ -25,13 +25,13 @@ predFile = sys.argv[2]
 truth =[] 
 with open(testFeatFile) as f:
     content = f.readlines()
-    for line in content: truth.append (line.split ( )[1]);
+    for line in content: truth.append (line.split ( )[0]);
 f.close()
 
 claasifier =[]
 with open(predFile) as f:
     content = f.readlines()
-    for line in content: claasifier.append (line.split ( )[1]);
+    for line in content: claasifier.append (line.split ( )[0]);
 f.close()
 
 results=[[0 for x in xrange(_len)] for y in xrange(_len)]
